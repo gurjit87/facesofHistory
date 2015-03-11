@@ -9,5 +9,26 @@
  */
 angular.module('facesofHistoryApp')
   .controller('MainCtrl', function ($scope, face) {
-    $scope.awesomeThings = face.faces;
+    
+    
+    var init = function init(){
+    	$scope.faces = face.faces;
+    	$scope.clearPerson()
+    }
+
+    $scope.saveNewPerson = function saveNewPerson(){
+    	face.faces.$add($scope.newPerson);
+    	$scope.clearPerson();
+    }
+
+    $scope.clearPerson = function clearPerson(){
+    	$scope.newPerson = {
+	    	name: '',
+	    	description: '',
+	    	imageUrl: ''
+    	}
+    }
+
+
+    init();
   });

@@ -11,7 +11,7 @@ angular.module('facesofHistoryApp')
   .service('face', function ($firebaseArray, $rootScope) {
     var face = this;
 
-    face.ref = new Firebase.($rootScope.endpoint);
+    face.ref = new Firebase($rootScope.endpoint);
 
     face.faces = $firebaseArray(face.ref);
 
