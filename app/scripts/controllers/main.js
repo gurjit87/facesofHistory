@@ -8,10 +8,6 @@
  * Controller of the facesofHistoryApp
  */
 angular.module('facesofHistoryApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, face) {
+    $scope.awesomeThings = face.faces;
   });
