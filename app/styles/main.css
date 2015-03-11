@@ -15,7 +15,14 @@ body {
 
 .faceCard{
   display: inline;
-  width: 300px;
+  height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.faceCard img{
+  width: auto;
+  height: 300px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
